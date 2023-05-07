@@ -12,7 +12,7 @@ Study Match no solo es una herramienta para encontrar compañeros de estudio, si
 
 Únete a Study Match hoy y comienza a conectarte con otros estudiantes con intereses y objetivos educativos similares. <br><br>
 
-**Características principales**<br><br>
+**Características principales**<br>
 * Registro y autenticación de usuarios
 * Perfil de usuario personalizable
 * Búsqueda de usuarios según criterios específicos
