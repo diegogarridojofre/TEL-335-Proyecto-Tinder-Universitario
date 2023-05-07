@@ -1,4 +1,16 @@
- Bienvenidos a Study Match, una plataforma que tiene como objetivo conectar a estudiantes con intereses educativos similares. ¿Alguna vez has querido encontrar un compañero de estudio con quien puedas trabajar en equipo y ayudarte mutuamente a alcanzar tus objetivos académicos? Con Study Match, puedes hacerlo de manera fácil y rápida. La plataforma funciona de manera similar a Tinder: los estudiantes crean perfiles donde pueden agregar información sobre sus intereses, objetivos educativos, habilidades y más. Luego, pueden desplazarse por una serie de perfiles y decidir si quieren conectarse con otros estudiantes. Una vez que dos estudiantes se han conectado, pueden chatear en la plataforma para discutir sus objetivos, intereses y cómo podrían colaborar en futuros proyectos de estudio. También pueden acordar reunirse en persona para trabajar juntos en una biblioteca o un café. Study Match no solo es una herramienta para encontrar compañeros de estudio, sino que también es una comunidad de apoyo para estudiantes. Con Study Match, puedes conocer a otros estudiantes que se encuentran en situaciones similares y que están dispuestos a ayudarte a alcanzar tus metas educativas. Únete a Study Match hoy y comienza a conectarte con otros estudiantes con intereses y objetivos educativos similares. ¡Juntos podemos alcanzar nuestros objetivos académicos
+ Study Match
+ 
+ Proyecto TEL 335
+ Integrantes: Diego Garrido Jofré
+              Clemente Aranguiz
+              Giovanni Camilo
+              Sofia Rojas
+              
+Bienvenidos a Study Match, una plataforma que tiene como objetivo conectar a estudiantes con intereses educativos similares. ¿Alguna vez has querido encontrar un compañero de estudio con quien puedas trabajar en equipo y ayudarte mutuamente a alcanzar tus objetivos académicos? Con Study Match, puedes hacerlo de manera fácil y rápida. 
+La plataforma funciona creando perfiles con los correos institucionales, donde pueden agregar información sobre sus intereses, objetivos educativos, habilidades y más. Luego, se debe seleccionar en que cateogría se quiere navegar. Existen dos categorias, un modo estudio y un modo relación. Al seleecionar la categoría deseada pueden desplazarse por una serie de perfiles y decidir si quieren conectarse con otros estudiantes. Una vez que dos estudiantes se han conectado, pueden chatear en la plataforma para discutir sus objetivos, intereses y cómo podrían colaborar en futuros proyectos de estudio u otras áreas. También pueden acordar reunirse en persona para trabajar juntos en la universidad. 
+Study Match no solo es una herramienta para encontrar compañeros de estudio, sino que también es una execelente herramienta para conocer gente nueva y relacionarse de la manera que uno quiera. 
+
+Únete a Study Match hoy y comienza a conectarte con otros estudiantes con intereses y objetivos educativos similares. 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
