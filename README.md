@@ -1,9 +1,13 @@
  Study Match
  
  Proyecto TEL 335
+ 
  Integrantes: Diego Garrido Jofré
+              
               Clemente Aranguiz
+              
               Giovanni Camilo
+              
               Sofia Rojas
               
 Bienvenidos a Study Match, una plataforma que tiene como objetivo conectar a estudiantes con intereses educativos similares. ¿Alguna vez has querido encontrar un compañero de estudio con quien puedas trabajar en equipo y ayudarte mutuamente a alcanzar tus objetivos académicos? Con Study Match, puedes hacerlo de manera fácil y rápida. 
