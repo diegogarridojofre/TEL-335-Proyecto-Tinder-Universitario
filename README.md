@@ -10,7 +10,65 @@ Bienvenidos a Study Match, una plataforma que tiene como objetivo conectar a est
 La plataforma funciona creando perfiles con los correos institucionales, donde pueden agregar información sobre sus intereses, objetivos educativos, habilidades y más. Luego, se debe seleccionar en que cateogría se quiere navegar. Existen dos categorias, un modo estudio y un modo relación. Al seleecionar la categoría deseada pueden desplazarse por una serie de perfiles y decidir si quieren conectarse con otros estudiantes. Una vez que dos estudiantes se han conectado, pueden chatear en la plataforma para discutir sus objetivos, intereses y cómo podrían colaborar en futuros proyectos de estudio u otras áreas. También pueden acordar reunirse en persona para trabajar juntos en la universidad. <br><br>
 Study Match no solo es una herramienta para encontrar compañeros de estudio, sino que también es una execelente herramienta para conocer gente nueva y relacionarse de la manera que uno quiera. 
 
-Únete a Study Match hoy y comienza a conectarte con otros estudiantes con intereses y objetivos educativos similares. 
+Únete a Study Match hoy y comienza a conectarte con otros estudiantes con intereses y objetivos educativos similares. <br><br>
+
+**Características principales**<br><br>
+* Registro y autenticación de usuarios
+* Perfil de usuario personalizable
+* Búsqueda de usuarios según criterios específicos
+* Sistema de mensajería integrado
+* Compatibilidad con dispositivos móviles<br><br>
+
+**Requisitos**
+Para poder utilizar StudyMatch, necesitarás tener instalado:
+
+* Node.js
+* MySQL<br><br>
+
+**Instalación**
+1. Clona este repositorio:<br>
+
+git clone https://github.com/diegogarridojofre/TEL-335-Study-Match
+
+2. Navega al directorio donde clonaste el repositorio:<br>
+
+cd TEL-335-Study-Match<br>
+
+3. Instala las dependencias necesarias:<br>
+
+npm install<br>
+
+4. Crea una base de datos en MySQL con el nombre study_match: <br>
+
+CREATE DATABASE study_match; <br>
+
+5. Ejecuta las migraciones de la base de datos:<br>
+npm run migrate<br>
+
+6. Inicia la aplicación: <br>
+
+npm start 
+
+7. Abre tu navegador web y navega a http://localhost:3000 para ver la aplicación en funcionamiento.<br>
+
+**Tecnologías utilizadas**
+* Node.js
+* React
+* Express
+* MySQL
+* Bootstrap
+* Contribuir
+
+Contacto
+Si tienes preguntas o comentarios sobre este proyecto, puedes contactar al equipo de StudyMatch en contactostudymatch@gmail.com.
+
+
+
+
+
+
+
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
