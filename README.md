@@ -1,7 +1,7 @@
 **Proyecto TEL 335: Study Match**
 
  Integrantes: 
- * Diego Garrido Jofré <br><br>
+ * Diego Garrido Jofré <br>
  * Clemente Aranguiz <br>
  * Giovanni Camilo <br>
  * Sofia Rojas <br>
