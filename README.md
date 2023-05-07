@@ -3,7 +3,7 @@
  Proyecto TEL 335
  
  Integrantes: Diego Garrido Jofré <br>
- &nbsp;&nbsp; Clemente Aranguiz <br>
+ &nbsp;         &nbsp; Clemente Aranguiz <br>
  &nbsp;&nbsp; Giovanni Camilo <br>
  &nbsp;&nbsp; Sofia Rojas <br>
               
