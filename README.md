@@ -1,7 +1,5 @@
-**Study Match**
- 
- Proyecto TEL 335
- 
+**Proyecto TEL 335: Study Match**
+
  Integrantes: 
  * Diego Garrido Jofré <br>
  * Clemente Aranguiz <br>
