@@ -38,7 +38,7 @@ cd TEL-335-Study-Match<br>
 
 npm install<br>
 
-4.Descargar modulos:
+4. Descargar modulos:
 
 npm i firebase ejs express nodemon
 
