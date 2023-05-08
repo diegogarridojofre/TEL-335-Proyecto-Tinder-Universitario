@@ -23,7 +23,7 @@ Study Match no solo es una herramienta para encontrar compañeros de estudio, si
 Para poder utilizar StudyMatch, necesitarás tener instalado:
 
 * Node.js
-* MySQL<br><br>
+
 
 **Instalación**
 1. Clona este repositorio:<br>
