@@ -38,26 +38,26 @@ cd TEL-335-Study-Match<br>
 
 npm install<br>
 
-4. Crea una base de datos en MySQL con el nombre study_match: <br>
+4.Descargar modulos:
 
-CREATE DATABASE study_match; <br>
+npm i firebase ejs express nodemon
 
-5. Ejecuta las migraciones de la base de datos:<br>
+5. Crea una base de datos en Firebase con el nombre firebase: <br>
+
+6. Ejecuta las migraciones de la base de datos:<br>
 npm run migrate<br>
 
-6. Inicia la aplicación: <br>
+7. Inicia la aplicación: <br>
 
 npm start 
 
-7. Abre tu navegador web y navega a http://localhost:3000 para ver la aplicación en funcionamiento.<br>
+8. Abre tu navegador web y navega a http://localhost:3000 para ver la aplicación en funcionamiento.<br>
 
 **Tecnologías utilizadas**
 * Node.js
-* React
 * Express
-* MySQL
-* Bootstrap
-* Contribuir
+* Firebase
+* Nodemon
 
 Contacto
 Si tienes preguntas o comentarios sobre este proyecto, puedes contactar al equipo de StudyMatch en contactostudymatch@gmail.com.
