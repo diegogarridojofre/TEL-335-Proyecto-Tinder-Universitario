@@ -1,0 +1,49 @@
+.profile-container {
+    border: 1px solid #612929;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    width: 300px; /* Cambia el valor para ajustar el ancho */
+    height: 300px; /* Cambia el valor para ajustar la altura */
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-1%,40%);
+    border-radius: 10px;
+  }
+
+  .profile-info {
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+
+  .profile-info p {
+    margin: 5px 0; /* Margen superior e inferior de los párrafos */
+  }
+  
+  .circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+  
+  
+  .circle-image {
+    width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 100%; /* Ajusta la altura de la imagen según tus necesidades */
+    border-radius: 80%;
+    object-fit: cover;
+  }
+
+  .edit-profile-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  
+  

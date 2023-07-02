@@ -1,0 +1,50 @@
+  .Login-fullscreen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .fullscreen-bg__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .login-form {
+    background-color:  rgba(255, 255, 255, 0.653);
+    padding: 12px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 350px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .forgot-password a {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color:rgb(1, 0, 0) !important; /* Cambia "blue" por el color que desees */
+  }
+
+  .login-form button {
+    border-radius: 10px; /* Redondear los bordes del botón */
+  }
+  

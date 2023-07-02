@@ -1,0 +1,106 @@
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.fullscreen-bg__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.circle-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  bottom: 500px;
+  transform: translateY(-400%);
+}
+
+.button-container .button-image {
+  width: 50px;
+  height: 50px;
+  background-color: #fff; /* Color de fondo de los botones */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+}
+
+.button-container .button-image img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+.buttoncontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  left: calc(300% - 300px);
+  transform: translateY(-100%);
+}
+
+.buttoncontainer .buttonimage {
+  width: 100px;
+  height: 100px;
+  background-color: #f0eeeecb; /* Color de fondo de los botones */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+}
+
+.buttoncontainer .buttonimage img {
+  width: 75px;
+  height: 75px;
+}
+.buttoncontainer .button-image:first-child {
+  position: absolute;
+  left: 300px; /* Ajusta la posición del botón "Anterior" hacia la izquierda */
+}
+
+.buttoncontainer .button-image:last-child {
+  position: absolute;
+  right: 00px; /* Ajusta la posición del botón "Siguiente" hacia la derecha */
+}
