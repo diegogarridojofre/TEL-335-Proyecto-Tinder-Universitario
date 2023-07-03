@@ -79,15 +79,16 @@ app.get('/MiPerfil/:email', (req, res) => {
 });
 
 app.get('/usuarios', (req, res) => {
-  pool.query('SELECT * FROM USUARIOS')
-    .then((result) => {
-      const usuarios = result.rows;
-      res.send(usuarios); // Enviar todos los usuarios como respuesta
-    })
-    .catch((error) => {
-      console.log(error);
-      res.status(500).send('Error al obtener los datos de los usuarios');
-    });
+  const email = req.query.email;
+  pool.query('SELECT * FROM USUARIOS WHERE email != $1 ', [email])    
+  .then((result) => {
+    const usuarios = result.rows;
+    res.send(usuarios); // Enviar todos los usuarios como respuesta
+  })
+  .catch((error) => {
+    console.log(error);
+    res.status(500).send('Error al obtener los datos de los usuarios');
+  });
 });
 
 app.put('/editarperfil/:email', (req, res) => {
@@ -193,5 +194,100 @@ app.post("/Perfiles/cita", (req, res) => {
       res.status(500).send("Error al verificar la existencia de los datos");
     });
 });
+
+app.post("/Perfiles/estudio", (req, res) => {
+  const emailprimero = req.body["emailprimero"];
+  const emailsegundo = req.body["emailsegundo"];
+
+  const verificarExistencia1 = 'SELECT COUNT(*) FROM ESTUDIO WHERE emailprimero = $1 AND emailsegundo = $2';
+  const verificarExistencia2 = 'SELECT COUNT(*) FROM ESTUDIO WHERE emailsegundo = $1 AND emailprimero = $2';
+
+  const values = [emailprimero, emailsegundo];
+
+  pool.query(verificarExistencia1, values)
+    .then((result1) => {
+      const rowCount1 = result1.rows[0].count;
+
+      pool.query(verificarExistencia2, values)
+        .then((result2) => {
+          const rowCount2 = result2.rows[0].count;
+          if (rowCount1==0) {
+            const insertar = 'INSERT INTO ESTUDIO (emailprimero, emailsegundo) VALUES ($1, $2)';
+        
+            pool.query(insertar, values)
+              .then(() => {
+                console.log("Datos guardados");
+                if (rowCount2>0){
+                  res.send("estudio");
+   }
+              })
+              .catch((err) => {
+                console.log(err);
+                res.status(500).send("Error al guardar los datos");
+              });
+          }
+         
+        })
+        .catch((err) => {
+          console.log(err);
+          res.status(500).send("Error al verificar la existencia de los datos");
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send("Error al verificar la existencia de los datos");
+    });
+});
+
+const multer = require("multer");
+
+// Configuración de Multer
+const upload = multer();
+
+app.post("/uploadImg", upload.fields([
+  { name: "img_perfil", maxCount: 1 },
+  { name: "img1", maxCount: 1 }
+]), (req, res) => {
+  const email = req.body["email"];
+  const name_ImgPerfil = req.body["name_imgperfil"];
+  const name_Img1 = req.body["name_img1"];
+  const img_Perfil = req.files["img_perfil"][0].buffer; // Obtiene los datos de la imagen como buffer
+  const img_1 = req.files["img1"][0].buffer; // Obtiene los datos de la imagen como buffer
+
+  const insertar = 'INSERT INTO fotos (email, name_imgperfil, img_perfil, name_img1, img1) VALUES ($1, $2, $3, $4, $5)';
+  const values = [email, name_ImgPerfil, img_Perfil, name_Img1, img_1];
+
+  pool.query(insertar, values)
+    .then((response) => {
+      console.log("datos guardados");
+      console.log(response);
+      res.send("Datos guardados exitosamente");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send("Error al guardar los datos");
+    });
+});
+
+app.get("/getImage", (req, res) => {
+  const email = req.query.email;
+ 
+  const selectQuery = 'SELECT img_perfil, img1 FROM fotos WHERE email = $1';
+  const values = [email];
+
+  pool.query(selectQuery, values)
+    .then((response) => {
+      const imgPerfil = response.rows[0].img_perfil;
+      const img1 = response.rows[0].img1;
+
+      res.send({ img_perfil: imgPerfil, img1: img1 });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send("Error al obtener los datos");
+    });
+});
+
+
 
 app.listen(4000, () => console.log("Servidor en localhost:4000"));

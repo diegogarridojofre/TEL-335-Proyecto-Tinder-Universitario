@@ -1,0 +1,77 @@
+.upload-fullscreen-bg {/*Edita la ventana*/
+    position: fixed; /* Permanece siempre en la misma ubicación */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Cambia el ancho a 100vw para ocupar todo el ancho de la ventana */
+    height: 100vh; /* Cambia la altura a 100vh para ocupar todo el alto de la ventana */
+    z-index: -1; /* Actua como primera capa, permitiendo que los elementos aparezcan encima de él */
+    overflow: hidden;
+  }
+  
+  .upload-background-image { /*Edita la imagen de fondo*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .upload-fullscreen-bg__image {/*Permite que la imagen cubra toda la pantalla*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+    
+  .upload-form { /*Ajustes del recuadro */
+    background-color: rgba(255, 255, 255, 0.653);
+    padding: 45px; /*Centra los objetos dentro del recuadro, creando un margen en el recuadro */
+    border-radius: 50px; /*Redondea los bordes del recuadro */
+    margin-top: auto;
+    margin-bottom: 20px;
+    width: 550px;
+    height: 300px;
+  }
+  
+  .upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50vh; /*Ajusta la altura del cuadro*/
+  
+    padding: 20px; /*Marco de espacio respecto a la ventana*/
+    width: 400px; /* Cambia el valor para ajustar el ancho */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .upload-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .upload-container label {
+    margin-bottom: 1px; /* Espacio entre los elementos */
+  }
+  
+  .upload-container input {
+    margin-bottom: 5px; /* Espacio entre los elementos */
+  }
+  
+  .upload-container button {
+    border-radius: 10px; /* Ajusta el valor según el grado de redondez deseado */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    

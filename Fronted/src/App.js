@@ -10,6 +10,8 @@ import EditarPerfil from "./EditarPerfil.js";
 import RecuperarPass from "./RecuperarPass.js";
 import RecuperarPassPreguntas from "./RecuperarPassPreguntas.js";
 import MatchCita from "./MatchCita.js";
+import UploadImage from "./UploadImage.js";
+import MatchEstudio from "./MatchEstudio.js";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 
@@ -33,6 +35,8 @@ function App() {
             <Route path="/RecuperarPass" element={<RecuperarPass />} />
             <Route path="/RecuperarPassPreguntas" element={<RecuperarPassPreguntas />} />
             <Route path="/MatchCita" element={<MatchCita />} />
+            <Route path="/UploadImage" element={<UploadImage />} />
+            <Route path="/MatchEstudio" element={<MatchEstudio />} />
            
           </Routes>
         </Container>

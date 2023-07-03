@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import inicioImg from './img/fondoVentanas.jpeg';
 import logoImage from './img/logo.jpeg';
+import {SetEmail} from './auxiliar';
 import './Registro.css'
 
 function Register() {
@@ -28,6 +29,7 @@ function Register() {
       setPass(value);
     } else if (name === "email") {
       setEmail(value);
+      SetEmail(value);
     } else if (name === "celular") {
       setCelular(value);
     } else if (name === "universidad") {
@@ -67,7 +69,7 @@ function Register() {
       .post("http://localhost:4000/register", newUser)
       .then((response) => {
         console.log(response.data);
-        navigate('/Login');
+        navigate('/UploadImage');
         // Hacer algo con la respuesta, como mostrar un mensaje de éxito
       })
       .catch((error) => {
@@ -210,7 +212,7 @@ function Register() {
         <p></p>
         <p></p>
         
-        <button type="submit">Crear Usuario</button>
+        <button type="submit">Siguiente</button>
       </form>
       
       </div>

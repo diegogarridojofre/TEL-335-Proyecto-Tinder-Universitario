@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Image, Container, Row, Button } from 'react-bootstrap';
+import {  Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import ventanasImg from './img/fondoVentanas.jpeg';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,23 +13,26 @@ import { getEmail } from './auxiliar';
 
 function Perfiles() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [usuarios, setUsuarios] = useState([]);
+  const [email, setEmail] = useState("");  const [usuarios, setUsuarios] = useState([]);
   const [usuarioActual, setUsuarioActual] = useState(null);
   const [usuarioIndex, setUsuarioIndex] = useState(0);
   const [Cita, setCita] = useState(null);
+  const [usuariosMostrados, setUsuariosMostrados] = useState([]);
+
+
 
   useEffect(() => {
     setEmail(getEmail());
-  }, []);
+
+  }, []);
 
   const handleLogin = () => {
     navigate('/home');
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/usuarios`)
-      .then((response) => {
+    axios.get(`http://localhost:4000/usuarios?email=${email}`)
+    .then((response) => {
         const usuariosData = response.data;
         setUsuarios(usuariosData);
         setUsuarioIndex(0); // Actualizar el índice a 0
@@ -37,20 +40,23 @@ function Perfiles() {
       })
       .catch((error) => {
         console.log(error);
-      });
-  }, []);
+      })
+  }, [email]);
+  
+
 
   const handleNextUser = () => {
-    const newIndex = (usuarioIndex + 1) % usuarios.length;
+    let newIndex = (usuarioIndex + 1) % usuarios.length;
     setUsuarioIndex(newIndex);
-    setUsuarioActual(usuarios[newIndex]);
+    setUsuarioActual(usuarios[newIndex] || null);
   };
 
   const handlePreviousUser = () => {
-    const newIndex = usuarioIndex === 0 ? usuarios.length - 1 : usuarioIndex - 1;
+    let newIndex = usuarioIndex === 0 ? usuarios.length - 1 : usuarioIndex - 1;
     setUsuarioIndex(newIndex);
-    setUsuarioActual(usuarios[newIndex]);
+    setUsuarioActual(usuarios[newIndex] || null);
   };
+
 
   const cita = (e) => {
     e.preventDefault();
@@ -58,8 +64,8 @@ function Perfiles() {
       emailprimero: email,
       emailsegundo: usuarioActual.email
     };
-    axios
-    .post("http://localhost:4000/Perfiles/cita", newCita)
+    handleNextUser();
+    axios.post("http://localhost:4000/Perfiles/cita", newCita)
     .then((response) => {
       if (response.data === "match") {
         setCita("match");
@@ -71,6 +77,27 @@ function Perfiles() {
         console.log(error);
       });
   };
+
+  
+  const estudio = (e) => {
+    e.preventDefault();
+    const newstudy= {
+      emailprimero: email,
+      emailsegundo: usuarioActual.email
+    };
+    handleNextUser();
+    axios.post("http://localhost:4000/Perfiles/estudio", newstudy)
+    .then((response) => {
+      if (response.data === "estudio") {
+        navigate("/MatchEstudio")
+      }
+      
+    })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
 
   return (
     <div className="fullscreen-bg">
@@ -119,7 +146,7 @@ function Perfiles() {
         <div className="buttonimage" onClick={cita}>
           <img src={require('./img/cita.jpeg')} alt="cita" />
         </div>
-        <div className="buttonimage" onClick={handleNextUser}>
+        <div className="buttonimage" onClick={estudio}>
           <img src={require('./img/estudio.jpeg')} alt="estudio" />
         </div>
       </div>

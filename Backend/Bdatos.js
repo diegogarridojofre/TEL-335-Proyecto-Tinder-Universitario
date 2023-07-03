@@ -31,8 +31,25 @@ pool.connect()
     emailprimero VARCHAR(100),
     emailsegundo VARCHAR(100)
     );`))
+  .then(() => pool.query(`
+  CREATE TABLE IF NOT EXISTS fotos (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(100),
+    name_imgperfil VARCHAR(100),
+    img_perfil BYTEA,
+    name_img1 VARCHAR(100),
+    img1 BYTEA
+  );`))
+  .then(() => pool.query(`
+  CREATE TABLE IF NOT EXISTS ESTUDIO(
+    id SERIAL PRIMARY KEY,
+    emailprimero VARCHAR(100),
+    emailsegundo VARCHAR(100)
+    );`))
   .then(() => console.log('Tabla creada exitosamente'))
   .catch((error) => console.error(error))
   ;
+
+  
 
 module.exports= pool;
