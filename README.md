@@ -62,7 +62,8 @@ npm start
 Contacto
 Si tienes preguntas o comentarios sobre este proyecto, puedes contactar al equipo de StudyMatch en contactostudymatch@gmail.com.
 
-![Video](https://www.youtube.com/embed/Tek4zS-mqp4)
+[![Alt Text](https://img.youtube.com/vi/Tek4zS-mqp4/0.jpg)](https://www.youtube.com/watch?v=Tek4zS-mqp4)
+
 
 
 <h3 align="left">Heramientas y Lenguajes:</h3>
